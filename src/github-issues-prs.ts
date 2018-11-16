@@ -465,9 +465,9 @@ export class GitHubIssuesPrsProvider implements TreeDataProvider<TreeItem> {
 
 	private getAPIOption() {
 		if (this.host === 'github.com') {
-			return { host: 'api.github.com' };
+			return { baseUrl: 'api.github.com' };
 		} else {
-			return { host: this.host, pathPrefix: '/api/v3' };
+			return { baseUrl: this.host };
 		}
 	}
 }
